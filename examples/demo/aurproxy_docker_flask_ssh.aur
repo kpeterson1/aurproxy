@@ -99,7 +99,7 @@ AURPROXY_SERVICE = aurproxy_service_template().bind(**docker_settings)
 jobs = [
   AURPROXY_SERVICE(
     environment='dev',
-    cluster = 'kpeterson-mesos-aurora-3',
+    cluster = 'my-mesos-cluster',
     role='root',
     name = 'aurproxy-demo',
   ).bind(
